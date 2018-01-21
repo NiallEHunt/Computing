@@ -1,3 +1,5 @@
+; Note this program was written by Niall Hunt in 2016
+	
 	AREA	Adjust, CODE, READONLY
 	IMPORT	main
 	IMPORT	getPicAddr
@@ -32,8 +34,10 @@ stop	B	stop
 ; Function: 	Loops through every pixel of the picture brightening them or increasing
 ;				the contrast based on the Alpha and Beta values. The function uses the 
 ;				the following equation to do these operations: 
-;				((R/G/B value * Alpha) ÷ 16) + Beta
+;				((R/G/B value * Alpha) Ã· 16) + Beta
 ; Returns:		void
+; Note this program was written by Niall Hunt in 2016
+
 brightenAndContrast
 	STMFD sp!, {R4-R10, LR}		; push(R4-R10, LR);
 	
@@ -87,6 +91,7 @@ endIFor							;
 endJFor							;
 	LDMFD sp!, {R4-R10, PC}		; pop(R4-R10, PC);
 								;
+; Note this program was written by Niall Hunt in 2016
 
 
 
@@ -121,7 +126,7 @@ endDivLoop					; return quotient;
 ; Parameters:	R0 = R/G/B value
 ;				R1 = Alpha
 ;				R2 = Beta
-; Function:		Takes in a R/B/G value and performs the calculation: ((R/G/B value * Alpha) ÷ 16) + Beta
+; Function:		Takes in a R/B/G value and performs the calculation: ((R/G/B value * Alpha) Ã· 16) + Beta
 ;				This is the formula to brighten and contrast the image based on the alpha and beta values.
 ;				This is capped at 255 and is not allowed to go below 0
 ; Returns:		R0 = Updated R/G/B value
@@ -153,3 +158,4 @@ endif							;
 								;
 	
 	END	
+; Note this program was written by Niall Hunt in 2016

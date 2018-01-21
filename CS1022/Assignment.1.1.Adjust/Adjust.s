@@ -1,4 +1,4 @@
-; Note this program was written by Niall Hunt in 2016
+; Note this program was written by Niall Hunt in 2017
 	
 	AREA	Adjust, CODE, READONLY
 	IMPORT	main
@@ -36,7 +36,7 @@ stop	B	stop
 ;				the following equation to do these operations: 
 ;				((R/G/B value * Alpha) ÷ 16) + Beta
 ; Returns:		void
-; Note this program was written by Niall Hunt in 2016
+; Note this program was written by Niall Hunt in 2017
 
 brightenAndContrast
 	STMFD sp!, {R4-R10, LR}		; push(R4-R10, LR);
@@ -91,7 +91,7 @@ endIFor							;
 endJFor							;
 	LDMFD sp!, {R4-R10, PC}		; pop(R4-R10, PC);
 								;
-; Note this program was written by Niall Hunt in 2016
+; Note this program was written by Niall Hunt in 2017
 
 
 
@@ -158,4 +158,4 @@ endif							;
 								;
 	
 	END	
-; Note this program was written by Niall Hunt in 2016
+; Note this program was written by Niall Hunt in 2017

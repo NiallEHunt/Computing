@@ -1,3 +1,5 @@
+; Note this program was written by Niall Hunt in 2016
+	
 	AREA	SymmDiff, CODE, READONLY
 	IMPORT	main
 	EXPORT	start
@@ -45,6 +47,8 @@ elseifa							; 		else if(currElemB == currElemA)
 								; 			countB++;
 endinnerwha						; 		}
 								;	} 		
+; Note this program was written by Niall Hunt in 2016
+								
 		ADD R1, R1,#1			; 	countA++;	
 		MOV R5, #0				; 	countB = 0;
 		LDR R6, =BElems			;   BElemsAdr = BElemsStartAdr;
@@ -129,3 +133,4 @@ CSize	DCD	0			; Number of elements in C
 CElems	SPACE	56			; Elements of C
 
 	END
+; Note this program was written by Niall Hunt in 2016

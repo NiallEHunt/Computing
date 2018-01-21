@@ -1,3 +1,4 @@
+; Note this program was written by Niall Hunt in 2016
 	AREA	ConsoleInput, CODE, READONLY
 	IMPORT	main
 	IMPORT	getkey
@@ -10,6 +11,8 @@ start
 	LDR R4, =0				; Running total in R5
 	LDR R5, =10				; Store 10 to use in the multiplication of total
 	
+; Note this program was written by Niall Hunt in 2016
+
 read
 	BL	getkey				; read key from console
 	CMP	R0, #0x0D			; while(ch != CR)
@@ -30,3 +33,4 @@ endRead
 stop	B	stop
 
 	END	
+; Note this program was written by Niall Hunt in 2016

@@ -1,3 +1,4 @@
+; Note this program was written by Niall Hunt in 2016	
 	AREA	DisplayResult, CODE, READONLY
 	IMPORT	main
 	IMPORT	getkey
@@ -64,6 +65,9 @@ enter							;
 		CMP R5, #0x20			;			if(lastChEntered != space)
 		BEQ endwhile			;			{
 afterspcheck					;		
+
+; Note this program was written by Niall Hunt in 2016
+
 								;				if(isNegative)
 		CMP R11, #0x2D			;				{
 		BNE afternegative		;					value = 0 - value;
@@ -134,6 +138,8 @@ endmean							;
 		BL sendchar				;	 }
 display							;
 								;
+; Note this program was written by Niall Hunt in 2016
+								
 		MOV R0, #0				;	 digitToPrint = 0;
 		MOV R1, #10				; 	 greatestPowerOfTen = 10;
 		MOV R2, #10				;	 
@@ -179,3 +185,4 @@ endprogram						;	 }
 stop	B	stop				; }
 
 	END	
+; Note this program was written by Niall Hunt in 2016

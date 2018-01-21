@@ -1,3 +1,5 @@
+; Note this program was written by Niall Hunt in 2017
+	
 	AREA	MotionBlur, CODE, READONLY
 	IMPORT	main
 	IMPORT	getPicAddr
@@ -34,6 +36,7 @@ endGaussianFor			; }
 	BL	putPic			; re-display the updated image
 
 stop	B	stop
+; Note this program was written by Niall Hunt in 2017
 
 
 
@@ -90,7 +93,9 @@ endForJIndex					;
 ;				R1 = picWidth
 ;				R2 = picHeight
 ; Function:		Copies the given picture to the address directly after it in memory
-; Return:		R0 = start address of copied image
+; Return:		R0 = start address of copied 
+; Note this program was written by Niall Hunt in 2017
+
 copyImage
 	STMFD sp!, {R4-R10, LR}		; push(R4-R10, LR);
 	MUL R9, R1, R2				; R9(offsetBetweenPics) = picHeight * picWidth;
@@ -220,6 +225,8 @@ yNotEqualJ						;
 	B XFor						;			
 endXFor							;
 								;	}
+; Note this program was written by Niall Hunt in 2017
+								
 	ADD R10, R10, #1			;
 	B YFor						;
 endYFor							;
@@ -281,3 +288,4 @@ endDivLoop					; return quotient;
 	
 		
 	END	
+; Note this program was written by Niall Hunt in 2017

@@ -1,3 +1,5 @@
+; Note this program was written by Niall Hunt in 2017
+	
 	AREA	MotionBlur, CODE, READONLY
 	IMPORT	main
 	IMPORT	getPicAddr
@@ -78,6 +80,7 @@ endForJIndex					;
 
 
 
+; Note this program was written by Niall Hunt in 2017
 
 ; Name:			copyImage
 ; Parameters:	R0 = picStartAdr
@@ -133,6 +136,8 @@ endJFor							; }
 ;				R3 = sidesOfMatrix
 ; Function: 	This function uses the edge detection convolution matrix to find the new RGB values for each pixel. 
 ; Returns:		void
+; Note this program was written by Niall Hunt in 2017
+
 averageMatrix
 	STMFD sp!, {R0-R11, LR}		; push(R0-R11, LR);
 								;
@@ -255,6 +260,8 @@ over255							;
 	MOV R4, #255				;
 afterCheck						;
 								;
+; Note this program was written by Niall Hunt in 2017
+								
 	STRB R4, [R0, R10]			; 	memory.StoreByte(R/G/BValue, picStartAdr + offset);
 								;
 	LDMFD sp!, {R3, R7, R10}	; 	pop(R3, R7, R10);
@@ -294,3 +301,4 @@ endDivLoop					; return quotient;
 	
 		
 	END	
+; Note this program was written by Niall Hunt in 2017

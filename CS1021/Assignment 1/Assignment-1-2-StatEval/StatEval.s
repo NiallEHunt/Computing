@@ -1,3 +1,4 @@
+; Note this program was written by Niall Hunt in 2016	
 	AREA	StatEval, CODE, READONLY
 	IMPORT	main
 	IMPORT	getkey
@@ -24,6 +25,7 @@ start
 		MOV R12, R0				; {
 		B	stats				;	firstChSpace = true;
 								; }
+; Note this program was written by Niall Hunt in 2016								
 
 while
 		BL	getkey				; read key from console and store in variable ch
@@ -86,6 +88,8 @@ afterMin						;			} else if(value > max)
 		MOV R9, R4				;			}
 afterMinMax						; 
 								;
+; Note this program was written by Niall Hunt in 2016
+								
 		CMP R12, #0x20			;			if((lastChEntered != space) || (lastChEntered == 0) || (lastChEntered == '-'))
 		BEQ aftercount			;			{
 		CMP R4, #0				;
@@ -130,3 +134,4 @@ endprogram						; }
 stop	B	stop						
 										
 	END								
+; Note this program was written by Niall Hunt in 2016

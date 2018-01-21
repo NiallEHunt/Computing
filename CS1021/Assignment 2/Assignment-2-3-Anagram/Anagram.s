@@ -1,3 +1,5 @@
+; Note this program was written by Niall Hunt in 2016
+	
 	AREA	Anagram, CODE, READONLY
 	IMPORT	main
 	EXPORT	start
@@ -80,6 +82,8 @@ bnotcapital							;
 		CMP R4, #'z'				; 					
 		BHI innerwhile				; 
 									; 
+; Note this program was written by Niall Hunt in 2016
+									
 									; 
 		CMP R3, R4					; 					if(currAChar == currBChar)
 		BNE innerwhile				; 					{
@@ -107,3 +111,4 @@ stringA	DCB	"Tom's",0
 stringB	DCB	"Most",0
 
 	END
+; Note this program was written by Niall Hunt in 2016

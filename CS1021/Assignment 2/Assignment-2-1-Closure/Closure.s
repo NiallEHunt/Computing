@@ -1,3 +1,4 @@
+; Note this program was written by Niall Hunt in 2016	
 	AREA	Closure, CODE, READONLY
 	IMPORT	main
 	EXPORT	start
@@ -40,6 +41,8 @@ endtotal						; }
 		ADD R5, R5,#4			; 	
 		MOV R8, #1				; count2 = 1;
 								; 
+; Note this program was written by Niall Hunt in 2016
+								
 startunique						;	
 		CMP R3, R1				; while(isClosed && count1 < ASize)
 		BHS endunique			; {	
@@ -135,3 +138,4 @@ ASize	DCD	7			; Number of elements in A
 AElems	DCD	0,-3,+9,-4,+3,-9,+4	; Elements of A
 
 	END
+; Note this program was written by Niall Hunt in 2016
